@@ -7,7 +7,7 @@
   <style>
     body {
       background-color: #121212;
-      color: #000;
+      color: #ffffff;
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -16,7 +16,7 @@
     header img {
       width: 100%;
       height: auto;
-      max-height: 250px;
+      max-height: auto;
       object-fit: contain;
       display: block;
     }
@@ -43,12 +43,25 @@
     }
 
     section {
-      background-color: #f7f7f7;
-      margin: 40px auto;
-      padding: 20px;
+      margin: 0 auto;
+      padding: 40px 20px;
       max-width: 1000px;
-      border-radius: 10px;
       overflow: auto;
+    }
+
+    section:nth-of-type(odd) {
+      background-color: #1e1e60; /* Dark blue */
+    }
+
+    section:nth-of-type(even) {
+      background-color: #3a1e5f; /* Dark purple */
+    }
+
+    section h2,
+    section p,
+    section ul,
+    section li {
+      color: #ffffff;
     }
 
     img.section-image-left {

@@ -47,12 +47,12 @@
       color: white;
       margin-top: 2rem;
     }
-    .feature-wrapper, .team-wrapper {
+    .feature-wrapper, .team-wrapper, .overview-wrapper {
       display: flex;
       align-items: flex-start;
       gap: 1.5rem;
     }
-    .feature-wrapper img, .team-wrapper img {
+    .feature-wrapper img, .team-wrapper img, .overview-wrapper img {
       max-width: 300px;
       height: auto;
       border-radius: 8px;
@@ -65,37 +65,38 @@
     <img src="https://tinypic.host/images/2025/06/02/pixelrunner.png" alt="Pixel Runner Header Graphic" />
   </header>
 
-  <section>
-    <h2>Project Overview</h2>
-    <p>This project delivers a plug-and-play Raspberry Pi arcade system that uses RetroPie and MAME to launch and navigate classic arcade games via an arcade stick interface. Designed for simplicity, reliability, and nostalgic fun, the system is built with ease of use in mind.</p>
-  </section>
+<!-- PROJECT OVERVIEW SECTION -->
+<section id="overview" style="overflow: auto; margin-bottom: 40px;">
+  <img src="https://tinypic.host/images/2025/06/02/projectoverview.png" alt="Project Overview" style="float: left; width: 300px; margin-right: 20px; border-radius: 10px;">
+  <h2>Project Overview</h2>
+  <p>
+    Pixel Runner is a custom-built arcade interface system that runs on a Raspberry Pi. The system features a plug-and-play experience using an arcade stick to browse, launch, and play classic MAME games through a clean, responsive front-end. Designed to boot quickly and operate offline, the system supports USB-based ROM loading and simple user configuration.
+  </p>
+</section>
 
-  <section>
-    <h2>Team Members</h2>
-    <div class="team-wrapper">
-      <img src="https://tinypic.host/images/2025/06/02/teammembers.png" alt="Team Members Graphic" />
-      <ul>
-        <li>Chris Cleare</li>
-        <li>Pat Harris</li>
-        <li>Liz Ryan</li>
-        <li>Desirae Sanderson</li>
-      </ul>
-    </div>
-  </section>
+<!-- TEAM MEMBERS SECTION -->
+<section id="team" style="overflow: auto; margin-bottom: 40px;">
+  <img src="https://tinypic.host/images/2025/06/02/teammembers.png" alt="Team Members" style="float: right; width: 300px; margin-left: 20px; border-radius: 10px;">
+  <h2>Team Members</h2>
+  <p>
+    Our project was developed by a collaborative team of four systems engineering students: Chris Cleare, Pat Harris, Liz Ryan, and Desirae Sanderson. Each member contributed to both the technical implementation and user-focused design of Pixel Runner.
+  </p>
+</section>
 
-  <section>
-    <div class="feature-wrapper">
-      <img src="https://tinypic.host/images/2025/06/02/keyfeatures.png" alt="Key Features" />
-      <ul>
-        <li>RetroPie-based operating system preloaded on a Raspberry Pi</li>
-        <li>MAME support for thousands of classic arcade games</li>
-        <li>Arcade stick navigation and control</li>
-        <li>Quick boot and user-friendly front-end</li>
-        <li>Offline operation with no internet requirement</li>
-      </ul>
-    </div>
-  </section>
-
+<!-- KEY FEATURES SECTION -->
+<section id="features" style="overflow: auto; margin-bottom: 40px;">
+  <img src="https://tinypic.host/images/2025/06/02/keyfeatures.png" alt="Key Features" style="float: left; width: 300px; margin-right: 20px; border-radius: 10px;">
+  <h2>Key Features</h2>
+  <ul>
+    <li>Fast boot-up and direct launch of arcade front-end</li>
+    <li>USB stick ROM importing</li>
+    <li>Intuitive navigation with arcade stick</li>
+    <li>Game metadata and categorization</li>
+    <li>Offline support, no internet required</li>
+    <li>Robust error handling for missing/corrupt ROMs</li>
+  </ul>
+</section>
+  
   <section>
     <h2>Required Components</h2>
     <ul>

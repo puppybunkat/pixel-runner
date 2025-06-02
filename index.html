@@ -43,18 +43,13 @@
     }
 
     section {
-      margin: 0 auto;
+      margin: 40px auto;
       padding: 40px 20px;
       max-width: 1000px;
-      overflow: auto;
-    }
-
-    section:nth-of-type(odd) {
       background-color: #1e1e60; /* Dark blue */
-    }
-
-    section:nth-of-type(even) {
-      background-color: #3a1e5f; /* Dark purple */
+      border: 5px solid #3a1e5f; /* Dark purple border */
+      box-sizing: border-box;
+      overflow: auto;
     }
 
     section h2,
@@ -64,16 +59,20 @@
       color: #ffffff;
     }
 
+    img.section-image-left,
+    img.section-image-right {
+      max-width: 300px;
+      border: 3px solid white;
+    }
+
     img.section-image-left {
       float: left;
       margin: 0 20px 20px 0;
-      max-width: 300px;
     }
 
     img.section-image-right {
       float: right;
       margin: 0 0 20px 20px;
-      max-width: 300px;
     }
 
     html {
@@ -100,7 +99,6 @@
 
   <section id="overview">
     <img src="https://tinypic.host/images/2025/06/02/projectoverview.png" alt="Project Overview" class="section-image-left" />
-    <h2>Project Overview</h2>
     <p>
       PixelRunner is a retro gaming setup that transforms a Raspberry Pi into an arcade console. It uses MAME (Multiple Arcade Machine Emulator) and a custom front-end for intuitive navigation and gameplay using an arcade stick. Designed for quick boot-up, offline use, and ease of play, PixelRunner delivers a nostalgic gaming experience powered by modern hardware.
     </p>
@@ -108,7 +106,6 @@
 
   <section id="features">
     <img src="https://tinypic.host/images/2025/06/02/keyfeatures.png" alt="Key Features" class="section-image-left" />
-    <h2>Key Features</h2>
     <ul>
       <li>Custom front-end launches on Raspberry Pi boot</li>
       <li>Arcade stick controls game navigation and launching</li>
@@ -120,7 +117,6 @@
 
   <section id="components">
     <img src="https://tinypic.host/images/2025/06/02/requiredcomponents.png" alt="Required Components" class="section-image-left" />
-    <h2>Required Components</h2>
     <ul>
       <li>Raspberry Pi 4 (or other version)</li>
       <li>Arcade Stick (or other gaming controller)</li>
@@ -133,7 +129,6 @@
 
   <section id="team">
     <img src="https://tinypic.host/images/2025/06/02/teammembers.png" alt="Team Members" class="section-image-right" />
-    <h2>Team Members</h2>
     <ul>
       <li>Chris Cleare</li>
       <li>Pat Harris</li>

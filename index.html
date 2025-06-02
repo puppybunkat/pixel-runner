@@ -2,115 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Raspberry Pi Arcade Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PixelRunner Project</title>
   <style>
     body {
+      background-color: #121212;
+      color: #000;
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
       margin: 0;
       padding: 0;
-      color: #333;
     }
-    header {
-      background-color: #20232a;
-      color: white;
-      text-align: center;
-      overflow: hidden;
-    }
+
     header img {
       width: 100%;
       height: auto;
+      max-height: 250px;
       object-fit: contain;
       display: block;
-      margin: 0 auto;
     }
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 2rem;
-    }
-    h1, h2 {
-      color: #20232a;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-    footer {
+
+    nav {
+      background-color: #1f1f1f;
+      padding: 10px 0;
       text-align: center;
-      padding: 1rem;
-      background-color: #20232a;
-      color: white;
-      margin-top: 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
-    .feature-wrapper, .team-wrapper, .overview-wrapper {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.5rem;
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
     }
-    .feature-wrapper img, .team-wrapper img, .overview-wrapper img {
+
+    nav a:hover {
+      color: #f9ca24;
+    }
+
+    section {
+      background-color: #f7f7f7;
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 1000px;
+      border-radius: 10px;
+      overflow: auto;
+    }
+
+    img.section-image-left {
+      float: left;
+      margin: 0 20px 20px 0;
       max-width: 300px;
-      height: auto;
-      border-radius: 8px;
-      flex-shrink: 0;
+    }
+
+    img.section-image-right {
+      float: right;
+      margin: 0 0 20px 20px;
+      max-width: 300px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    ul {
+      padding-left: 20px;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <img src="https://tinypic.host/images/2025/06/02/pixelrunner.png" alt="Pixel Runner Header Graphic" />
+    <img src="https://tinypic.host/images/2025/06/02/pixelrunner.png" alt="PixelRunner Banner" />
   </header>
 
-<!-- PROJECT OVERVIEW SECTION -->
-<section id="overview" style="overflow: auto; margin-bottom: 40px;">
-  <img src="https://tinypic.host/images/2025/06/02/projectoverview.png" alt="Project Overview" style="float: left; width: 300px; margin-right: 20px; border-radius: 10px;">
- 
-  <p>
-    Pixel Runner is a custom-built arcade interface system that runs on a Raspberry Pi. The system features a plug-and-play experience using an arcade stick to browse, launch, and play classic MAME games through a clean, responsive front-end. Designed to boot quickly and operate offline, the system supports USB-based ROM loading and simple user configuration.
-  </p>
-</section>
+  <nav>
+    <a href="#overview">Overview</a>
+    <a href="#features">Key Features</a>
+    <a href="#components">Required Components</a>
+    <a href="#team">Team Members</a>
+  </nav>
 
-<!-- TEAM MEMBERS SECTION -->
-<section id="team" style="overflow: auto; margin-bottom: 40px;">
-  <img src="https://tinypic.host/images/2025/06/02/teammembers.png" alt="Team Members" style="float: right; width: 300px; margin-left: 20px; border-radius: 10px;">
+  <section id="overview">
+    <img src="https://tinypic.host/images/2025/06/02/projectoverview.png" alt="Project Overview" class="section-image-left" />
+    <h2>Project Overview</h2>
+    <p>
+      PixelRunner is a retro gaming setup that transforms a Raspberry Pi into an arcade console. It uses MAME (Multiple Arcade Machine Emulator) and a custom front-end for intuitive navigation and gameplay using an arcade stick. Designed for quick boot-up, offline use, and ease of play, PixelRunner delivers a nostalgic gaming experience powered by modern hardware.
+    </p>
+  </section>
 
-  <p>
-    Our project was developed by a collaborative team of four systems engineering students: Chris Cleare, Pat Harris, Liz Ryan, and Desirae Sanderson. Each member contributed to both the technical implementation and user-focused design of Pixel Runner.
-  </p>
-</section>
-
-<!-- KEY FEATURES SECTION -->
-<section id="features" style="overflow: auto; margin-bottom: 40px;">
-  <img src="https://tinypic.host/images/2025/06/02/keyfeatures.png" alt="Key Features" style="float: left; width: 300px; margin-right: 20px; border-radius: 10px;">
-
-  <ul>
-    <li>Fast boot-up and direct launch of arcade front-end</li>
-    <li>USB stick ROM importing</li>
-    <li>Intuitive navigation with arcade stick</li>
-    <li>Game metadata and categorization</li>
-    <li>Offline support, no internet required</li>
-    <li>Robust error handling for missing/corrupt ROMs</li>
-  </ul>
-</section>
-  
-  <section>
-    <h2>Required Components</h2>
+  <section id="features">
+    <img src="https://tinypic.host/images/2025/06/02/keyfeatures.png" alt="Key Features" class="section-image-left" />
+    <h2>Key Features</h2>
     <ul>
-      <li>Raspberry Pi 4 (or other supported version)</li>
-      <li>Arcade Stick or compatible USB controller</li>
-      <li>USB-C power supply</li>
-      <li>Micro HDMI cable</li>
-      <li>MicroSD card (16GB or larger)</li>
-      <li>USB data stick for ROM transfers</li>
+      <li>Custom front-end launches on Raspberry Pi boot</li>
+      <li>Arcade stick controls game navigation and launching</li>
+      <li>ROM files automatically detected and categorized</li>
+      <li>Supports metadata display and genre filtering</li>
+      <li>Designed for offline use and ease of setup</li>
     </ul>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Raspberry Pi Arcade Project Team</p>
-  </footer>
+  <section id="components">
+    <img src="https://tinypic.host/images/2025/06/02/requiredcomponents.png" alt="Required Components" class="section-image-left" />
+    <h2>Required Components</h2>
+    <ul>
+      <li>Raspberry Pi 4 (or other version)</li>
+      <li>Arcade Stick (or other gaming controller)</li>
+      <li>USB-C power supply</li>
+      <li>Micro HDMI cable</li>
+      <li>MicroSD card</li>
+      <li>USB data stick</li>
+    </ul>
+  </section>
+
+  <section id="team">
+    <img src="https://tinypic.host/images/2025/06/02/teammembers.png" alt="Team Members" class="section-image-right" />
+    <h2>Team Members</h2>
+    <ul>
+      <li>Chris Cleare</li>
+      <li>Pat Harris</li>
+      <li>Liz Ryan</li>
+      <li>Desirae Sanderson</li>
+    </ul>
+  </section>
 </body>
 </html>
